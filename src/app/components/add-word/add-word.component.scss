@@ -1,0 +1,52 @@
+input, button {
+    font-size: 20px;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+input {
+    border: 2px solid grey;
+    background-color: #fff;
+    color: blue;
+}
+button {
+    border: 2px solid blue;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(8, 8, 242)
+    }
+    &:disabled {
+        color: rgb(219, 203, 203);
+        cursor: not-allowed;
+    }
+}
+label {
+    font-size: 20px;
+}
+form {
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    .field {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    form {
+        width: auto;
+        margin: 50px 5%;
+        .field {
+            flex-direction: column;
+            align-items: stretch;
+            label {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

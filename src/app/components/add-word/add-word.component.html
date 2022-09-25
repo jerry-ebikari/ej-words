@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+    <div class="field">
+      <label for="name">Name:</label>
+      <input type="text" placeholder="Enter word" name="word" formControlName="word" (input)="updateWordCount()">
+    </div>
+    <div class="field">
+      <label for="name">Definition:</label>
+      <input type="text" placeholder="Enter definition" name="definition" formControlName="definition">
+    </div>
+    <div class="field">
+      <label for="name">Word Count:</label>
+      <input type="number" name="wordCount" formControlName="wordCount" [attr.disabled]="true">
+    </div>
+    <button type="button" (click)="submit()" [disabled]="form.invalid || adding">
+      {{adding ? 'Please wait...' : 'Submit'}}
+    </button>
+  </form>
